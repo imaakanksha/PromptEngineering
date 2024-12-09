@@ -1,0 +1,219 @@
+Gen AI Evolution
+LLM - Advantages & Limtations
+Prompt Engineering - Need, Prompt Techniques, Best Practices - Designing Prompts
+Tokenization
+RAG
+Agentic AI Approach
+
+===================================
+Generative AI Evolution
+
+ Eliza Chatbot (Rulebased Chatbot)-1967
+1997- LSTM (Long Short Term Memory) Forcasting become possible after LSTM
+2010 - Stanford Core NLP (Sentiment Analysis i.e. reviews on ecommerce sites)
+2011 - Google Brain (Google Deepmind)
+2017 - Google Transformer Architecture
+2020 - OpenAI GPT-3
+2022 - ChatGPT
+====================================
+
+LLM (Large Language Model)
+
+It processes and generates human like text.
+
+What is Prompt Engineering?
+
+It designs inputs to guide AI responses effectively.
+
+LLM Advantages and Limitations
+LLM Advantages:
+Can Process Huge amount of data.
+Improved Accuracy in various NLP Tasks- Language translation, sentiment analysis and text generation.
+Enhanced understanding of context and nuances of Human language.
+Potential applications in areas like Customer Service, Content Creation and education.
+
+LLM Limitations
+
+Require large amounts of computational resources and training data.
+Can be prone to biases and errors if trained on biased or incomplete data.
+May struggle with out-of-domain/edge cases.
+Raise Concerns about data privacy and security.
+===================================
+
+PROMPT ENGINEERING - NEED
+
+GPU
+NPU
+TPU 
+By designing thoughtful prompts, we can mitigate some of the disadvantages of LLMs and unlock their true potential.
+
+Improves Model Performance & Accuracy
+Reduces Bias and Error Rates
+Enhances User Experience and Engagement
+Unlocks New Use Cases and Applications
+=====================================
+
+PROMPTING TECHNIQUES
+
+ZERO SHOT PROMPTING
+ONE SHOT PROMPTING
+FEW SHOT PROMPTING
+CHAIN OF THOUGHT PROMPTING
+MAP REDUCE PROMPTING
+UNIVERSAL SELF CONSISTENCY PROMPTING
+
+
+ZERO SHOT PROMPTING
+
+Zero-Shot prompting involves prompting without any additional context or examples. This technique relies heavily on the model's prior knowledge and generalization capabilities.
+
+ONE SHOT PROMPTING
+
+Provides a single example along with a prompt, allowing the model to learn from that specific instance.
+This technique can help improve performance on tasks with limited training Data.
+Drawback of One Shot Prompting: It can lead to overfitting on the single example provided.
+overfitting
+
+FEW SHOT PROMPTING
+
+Few-shot prompting involves providing multiple examples typically 2-10 along with a prompt, enabling the model to learn patterns and relationships between inputs.
+
+CHAIN OF THOUGHT PROMPTING
+
+Chain-of-thought prompting involves breaking down complex reasoning tasks into smaller, more manageable steps allowing the model to generate intermediate outputs before producing the final response.
+
+MAP REDUCE PROMPTING
+
+Map Step: Breaks down a problem into smaller sub-tasks.
+
+Reduce Step: Aggregates the results of the sub-tasks to reach a final solution.
+
+Keep the token limits in mind. We need to be under the token limits.
+
+UNIVERSAL SELF CONSISTENCY PROMPTING
+
+Recent prompting technique.
+
+Sample a diverse set of reasoning paths. 
+Marginalize out the reasoning path.
+
+======================================
+
+Best Practices - Designing Prompts
+
+Dos and Do not's - Designing Prompts
+
+Be clear and Specific: Provide a concise and specific prompt to avoid ambiguity.
+
+Break Down Complex Requests: Break complex task into smaller manageable steps.
+
+Provide Context: Give necessary context if the task depends on it.
+
+Use Examples to Guide the Model: To guide the model towards the right style or format, include examples of the type of answer you are looking for.
+
+Keep Prompts Concise: Avoid Overloading, focus on being brief and direct.
+
+Ensure Proper Formatting: Use Correct grammar and Punctuation.
+
+Be Mindful of Token Limits: GPT models have a token limit of 4096 tokens, which includes both input and output.
+
+Use Direct Language: Be explicit with request.
+
+Test and iterate: After receiving a response, test different variations of the prompt if needed. Adjust your wording or provide the more context to get the desired output from the LLM.
+
+Provide Constraints: Limit the response scope.
+
+Control the Tone and Style: Set Expectations for Output Style (e.g. formal, casual, technical).
+
+Anticipate Model Limitations: If accuracy is critical, ask the model to "verify" its response.
+=======================================
+
+Tokenization
+Tokens are fundamental building block of the Large Language Model.
+
+Tokens: The fundamental building blocks of language for LLMs. They can be whole words, parts of words, or even single characters.
+
+Tokenizer convert the prompt to token using the tokenizer model. To tokenize the we use Lang Chain Library.
+
+Tokenization is done by Tokenizer.
+
+Characters v/s Words v/s Tokens
+
+Characters, Words, Tokens
+
+Characters  = t, 
+Words = Tokenization is done by Tok, Tokens= 
+
+====================================
+
+RAG Retrieval Augment Generation
+
+RAG Architecture
+Vector Embedding Models
+Vector Stores
+Cosine Similarity
+
+
+
+RAG stands for Retrieval Augmented Generation.
+
+Limited Knowledge: Generative Models may not have access to all relevant information on a particular topic or domain.
+
+Outdated Knowledge: Training Data may be outdated, leading to generated text that is no longer accurate or relevant.
+
+Lack of Specificity: Generated text may not be specific enough or tailored to a particular context or task.
+
+========================================
+
+RAG Architecture
+
+Pre-processing Knowledge Collection, Chunking and Embedding
+
+User Documents => Embedding Model => Embeddings=> 
+Vector DB=> Embeddings
+|
+Relevant Context (Retrieval)
+|
+Query + Context (Augmentation)=>Query=>Embedding Model => Embedding
+|
+(Generation) LLM
+|
+Response
+
+========================================
+
+Vector Embedding Model
+
+Words as Points: Each word is represented as a unique point on the map. When we plot these points, words that are similar in meaning will be close together on the map. Imagine you are trying to understand the meaning of words in a sentence. One way to do this is to think of each word as a point in a big map. This map is called a "Vector Space".
+
+Vector Stores:
+
+Data => Vector Embeddings/Vector Data => Vector Database Single Store
+
+Cosine Similarity Matrix
+
+Cosine Similarity is common method used to measure the similarity, as it calculates the cosine of the angle between two vectors (in a high dimensional Vector Space).
+
+Cosine in LLM
+
+point has both point in a plane as well as direction.
+
+========================================
+
+Agentic AI Approach
+Autogen Library
+
+Agentic AI refers to an AI system where agents which are like digital "helpers" can make decision on their own and take actions based on their on the information they receive.
+
+These agents are autonomous, meaning they do not need someone to tell them what to do at every moment. Instead, they can decide for themselves how to act in a given situation.
+
+Conversable Agents
+
+Human in the loop
+
+Auto-reply Components
+Code Executor
+Tool Executor
+LLM
+
+
